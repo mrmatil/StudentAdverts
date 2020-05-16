@@ -21,10 +21,17 @@
             "aot": true,
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/assets/images/",
+              "src/css/flexslider.css",
+              "src/css/font-awesome.min.css"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "src/assets/css/style.css",
+              "src/assets/css/bootstrap.min.css",
+              "src/assets/css/bootstrap-select.css"
+
             ],
             "scripts": []
           },
