@@ -5,7 +5,9 @@
 export const environment = {
   production: false,
   apiUrlAdvert: 'https://studentadverts.azurewebsites.net/adverts/',
-  apiUrlAccount: 'https://studentadverts.azurewebsites.net/api/account/'
+  apiUrlAccount: 'https://studentadverts.azurewebsites.net/api/account/',
+  apiUrlToken: 'https://studentadverts.azurewebsites.net/token',
+  apiUrlToken2: 'http://localhost:64446/token'
 }
 
 /*

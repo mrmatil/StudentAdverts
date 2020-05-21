@@ -1,12 +1,16 @@
 {
   "ExpandedNodes": [
     "",
+    "\\e2e",
+    "\\e2e\\src",
     "\\src",
     "\\src\\app",
     "\\src\\app\\home",
-    "\\src\\app\\logging",
     "\\src\\app\\register",
-    "\\src\\assets"
+    "\\src\\assets",
+    "\\src\\assets\\dist",
+    "\\src\\assets\\dist\\js"
   ],
+  "SelectedNode": "\\src\\app\\register\\register.component.ts",
   "PreviewInSolutionExplorer": false
 }
