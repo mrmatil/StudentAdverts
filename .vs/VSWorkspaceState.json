@@ -3,8 +3,10 @@
     "",
     "\\src",
     "\\src\\app",
-    "\\src\\app\\home"
+    "\\src\\app\\home",
+    "\\src\\app\\logging",
+    "\\src\\app\\register",
+    "\\src\\assets"
   ],
-  "SelectedNode": "\\src\\app\\home\\home.component.css",
   "PreviewInSolutionExplorer": false
 }
