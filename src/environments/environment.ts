@@ -3,8 +3,10 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
-};
+  production: false,
+  apiUrlAdvert: 'https://studentadverts.azurewebsites.net/adverts/',
+  apiUrlAccount: 'https://studentadverts.azurewebsites.net/api/account/'
+}
 
 /*
  * For easier debugging in development mode, you can import the following file

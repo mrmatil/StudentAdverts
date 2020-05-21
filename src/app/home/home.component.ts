@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from '../api.service';
+import { collectExternalReferences } from '@angular/compiler';
 
 @Component({
   selector: 'app-home',
@@ -6,10 +8,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-
-  constructor() { }
+  adverts;
+  constructor(private apiService: ApiService) { }
 
   ngOnInit(): void {
+    this.apiService.getAdverts().subscribe((data) => {
+      console.log(data);
+      this.adverts = data;
+      console.log(this.adverts);
+    });
   }
 
+  
+   
 }
