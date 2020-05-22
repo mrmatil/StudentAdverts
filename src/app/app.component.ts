@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs/operators';
+import { LocalStorageService, SessionStorageService, LocalStorage, SessionStorage } from 'angular-web-storage';
 
 @Component({
   selector: 'app-root',
@@ -10,7 +11,7 @@ import { map } from 'rxjs/operators';
 export class AppComponent  implements OnInit{
   title = 'AngularProject';
 
-  constructor() { }
+  constructor(public local: LocalStorageService, public session: SessionStorageService) { }
 
   ngOnInit() {
   }

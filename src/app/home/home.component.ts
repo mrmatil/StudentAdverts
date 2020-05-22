@@ -17,6 +17,9 @@ export class HomeComponent implements OnInit {
       this.adverts = data;
       console.log(this.adverts);
     });
+
+    if (sessionStorage.getItem('user') != null)
+      console.log(sessionStorage.getItem('user'));
   }
     
 }
