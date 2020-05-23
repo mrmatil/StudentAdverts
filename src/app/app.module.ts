@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { AngularWebStorageModule } from 'angular-web-storage';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -20,7 +21,8 @@ import { RegisterComponent } from './register/register.component';
     HttpClientModule,
     BrowserModule,
     AppRoutingModule,
-    AngularWebStorageModule
+    AngularWebStorageModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

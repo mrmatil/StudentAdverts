@@ -5,9 +5,9 @@
     "\\e2e\\src",
     "\\src",
     "\\src\\app",
-    "\\src\\app\\home",
+    "\\src\\app\\logging",
     "\\src\\app\\register"
   ],
-  "SelectedNode": "\\src\\main.ts",
+  "SelectedNode": "\\src\\app\\logging\\logging.component.ts",
   "PreviewInSolutionExplorer": false
 }

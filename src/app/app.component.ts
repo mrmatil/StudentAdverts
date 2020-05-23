@@ -21,5 +21,10 @@ export class AppComponent  implements OnInit{
     }
   }
 
+  logout() {
+    sessionStorage.clear();
+    location.reload();
+  }
+
   
 }

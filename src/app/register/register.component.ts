@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../api.service';
 import { error } from '@angular/compiler/src/util';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -9,28 +10,43 @@ import { error } from '@angular/compiler/src/util';
 })
 export class RegisterComponent implements OnInit {
 
-  constructor(private apiService: ApiService) { }
+  constructor(private apiService: ApiService, private router: Router) { }
+
+  login: string;
+  password: string;
+  confirmPassword: string;
+  tst;
 
   private json;
 
   ngOnInit(): void {
-    //this.apiService.register('bananowy@huopiec44.pl','qwerty','qwerty').subscribe((data) => {
-    this.apiService.getToken('bananowy@huopiec44.pl', 'qwerty').subscribe(
-      token => {
-        //console.log(token);
+  }
+
+  loglog() {
+    console.log(this.password);
+  }
+
+  register() {
+    this.apiService.register(this.login,this.password,this.confirmPassword).subscribe((data) => {
+    this.apiService.getToken(this.login, this.password).subscribe( token => {
         this.json = token;
         sessionStorage.setItem('token', this.json.access_token);
         sessionStorage.setItem('user', this.json.userName);
-        console.log(sessionStorage.getItem('token'));
-        console.log(sessionStorage.getItem('user'));
-
+        this.router.navigate(['/'])
+          .then(() => {
+            window.location.reload();
+        });
       },
       error => {
         console.log(error);
-        console.log("XDDDD");
+        alert("Błąd logowania");
       });
 
-    //});
+    },
+    error => {
+      console.log(error);
+      alert("Błąd rejestracji");
+    });
   }
 
 }
