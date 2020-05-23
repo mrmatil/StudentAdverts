@@ -18,7 +18,7 @@ export class RegisterComponent implements OnInit {
     this.apiService.getToken('bananowy@huopiec44.pl', 'qwerty').subscribe(
       token => {
         //console.log(token);
-        this.json = token;       
+        this.json = token;
         sessionStorage.setItem('token', this.json.access_token);
         sessionStorage.setItem('user', this.json.userName);
         console.log(sessionStorage.getItem('token'));

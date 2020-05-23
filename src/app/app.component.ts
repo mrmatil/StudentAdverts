@@ -9,11 +9,16 @@ import { LocalStorageService, SessionStorageService, LocalStorage, SessionStorag
   styleUrls: ['./app.component.css']
 })
 export class AppComponent  implements OnInit{
-  title = 'AngularProject';
-
+  title = 'Student Adverts';
+  isLogged = false;
+  name = 'bruh';
   constructor(public local: LocalStorageService, public session: SessionStorageService) { }
 
   ngOnInit() {
+    if (sessionStorage.getItem('user') != null) {
+      this.isLogged = true;
+      this.name = sessionStorage.getItem('user');
+    }
   }
 
   
