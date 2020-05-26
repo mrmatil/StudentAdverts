@@ -2,12 +2,16 @@
   "ExpandedNodes": [
     "",
     "\\e2e",
-    "\\e2e\\src",
     "\\src",
     "\\src\\app",
-    "\\src\\app\\logging",
-    "\\src\\app\\register"
+    "\\src\\app\\add",
+    "\\src\\app\\edit",
+    "\\src\\app\\home",
+    "\\src\\app\\shared",
+    "\\src\\app\\shared\\models",
+    "\\src\\bootstrap",
+    "\\src\\bootstrap\\js"
   ],
-  "SelectedNode": "\\src\\app\\logging\\logging.component.ts",
+  "SelectedNode": "\\src\\app\\edit\\edit.component.ts",
   "PreviewInSolutionExplorer": false
 }

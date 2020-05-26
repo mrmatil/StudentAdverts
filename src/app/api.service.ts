@@ -6,6 +6,7 @@ import * as $ from 'jquery';
 import { User } from './shared/models/user.model';
 import { Token } from '@angular/compiler/src/ml_parser/lexer';
 import { NewAdvert } from './shared/models/newAdvert.model';
+import { EditedAdvert } from './shared/models/editedAdvert.model';
 @Injectable({
   providedIn: 'root'
 })
@@ -65,5 +66,16 @@ export class ApiService {
       headers: new HttpHeaders().set('Authorization', `Bearer ${token}`)
     };
     return this.http.delete(`${environment.apiUrlAdvert}deleteadvert/${id}`, options);
+  }
+
+  getAdvert(id) {
+    return this.http.get<Advert[]>(`${environment.apiUrlAdvert}getadvertbyid/${id}`);
+  }
+
+  editAdvert(id, token, editedAdvert: Advert) {
+    let options = {
+      headers: new HttpHeaders().set('Authorization', `Bearer ${token}`)
+    };
+    return this.http.put(`${environment.apiUrlAdvert}putadvert/${id}`, editedAdvert, options);
   }
 }

@@ -5,6 +5,7 @@ import { LoggingComponent } from './logging/logging.component';
 import { RegisterComponent } from './register/register.component';
 import { MyadvertsComponent } from './myadverts/myadverts.component';
 import { AddComponent } from './add/add.component';
+import { EditComponent } from './edit/edit.component';
 
 
 const routes: Routes = [
@@ -17,7 +18,8 @@ const routes: Routes = [
   { path: 'logging', component: LoggingComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'myadverts', component: MyadvertsComponent },
-  { path: 'add', component: AddComponent}
+  { path: 'add', component: AddComponent },
+  { path: 'edit/:id', component: EditComponent}
 
 ];
 

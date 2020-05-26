@@ -11,6 +11,7 @@ import { LoggingComponent } from './logging/logging.component';
 import { RegisterComponent } from './register/register.component';
 import { MyadvertsComponent } from './myadverts/myadverts.component';
 import { AddComponent } from './add/add.component';
+import { EditComponent } from './edit/edit.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { AddComponent } from './add/add.component';
     LoggingComponent,
     RegisterComponent,
     MyadvertsComponent,
-    AddComponent
+    AddComponent,
+    EditComponent
   ],
   imports: [
     HttpClientModule,
