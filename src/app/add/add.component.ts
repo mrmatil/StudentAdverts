@@ -12,7 +12,16 @@ export class AddComponent implements OnInit {
   email: string;
   phone: number;
   description: string;
+  price: number;
   constructor(private apiService: ApiService, private router: Router) { }
+
+  selectedFile: File;
+  
+
+  onFileChanged(event) {
+    this.selectedFile = event.target.files[0]
+  }
+
 
   ngOnInit(): void {
     if (sessionStorage.getItem('user') == null) {
@@ -24,7 +33,7 @@ export class AddComponent implements OnInit {
   }
 
   addAdvert() {
-    this.apiService.addAdvert(this.title, this.email, this.phone, this.description, sessionStorage.getItem('token')).subscribe(data => {      
+    this.apiService.addAdvert(this.title, this.email, this.phone, this.description, this.selectedFile, this.price, sessionStorage.getItem('token')).subscribe(data => {      
       this.router.navigate(['/myadverts'])
         .then(() => {
           window.location.reload();

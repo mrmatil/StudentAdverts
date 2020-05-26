@@ -6,4 +6,6 @@ export class Advert {
   phone: number;
   dateAndTime: Date;
   description: string;
+  price?: number;
+  image?: File;
 }

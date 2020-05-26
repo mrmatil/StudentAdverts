@@ -4,4 +4,6 @@ export class NewAdvert {
   phone: number;
   dateAndTime: Date;
   description: string;
+  price?: number;
+  image?: File;
 }

@@ -47,7 +47,7 @@ export class ApiService {
     return this.http.get<Advert[]>(`${environment.apiUrlAdvert}getusersadverts`, options);
   }
 
-  addAdvert(title, email, phonenumber, description, token) {
+  addAdvert(title, email, phonenumber, description, image, price, token) {
     let dateTime = new Date();
     let advert = new NewAdvert();
     advert.title = title;
@@ -55,6 +55,9 @@ export class ApiService {
     advert.phone = phonenumber;
     advert.description = description;
     advert.dateAndTime = dateTime;
+    advert.price = price;
+    advert.image = image;
+    console.log(advert);
     let options = {
       headers: new HttpHeaders().set('Authorization', `Bearer ${token}`)
     };
