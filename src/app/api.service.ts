@@ -5,7 +5,7 @@ import { Advert } from 'src/app/shared/models/advert.model';
 import * as $ from 'jquery';
 import { User } from './shared/models/user.model';
 import { Token } from '@angular/compiler/src/ml_parser/lexer';
-
+import { NewAdvert } from './shared/models/newAdvert.model';
 @Injectable({
   providedIn: 'root'
 })
@@ -44,5 +44,19 @@ export class ApiService {
       headers: new HttpHeaders().set('Authorization', `Bearer ${token}`)
     };
     return this.http.get<Advert[]>(`${environment.apiUrlAdvert}getusersadverts`, options);
+  }
+
+  addAdvert(title, email, phonenumber, description, token) {
+    let dateTime = new Date();
+    let advert = new NewAdvert();
+    advert.title = title;
+    advert.email = email;
+    advert.phone = phonenumber;
+    advert.description = description;
+    advert.dateAndTime = dateTime;
+    let options = {
+      headers: new HttpHeaders().set('Authorization', `Bearer ${token}`)
+    };
+    return this.http.post(`${environment.apiUrlAdvert}postadvert`, advert, options);
   }
 }

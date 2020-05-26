@@ -8,7 +8,7 @@
       <a class="py-2 d-none d-md-inline-block" href="/myadverts">Your adverts</a>
     </div>
     <div *ngIf="isLogged == true">
-      <a class="py-2 d-none d-md-inline-block" href="#">Add advert</a>
+      <a class="py-2 d-none d-md-inline-block" href="/add">Add advert</a>
     </div>
     <div *ngIf="isLogged == true">
       <a class="py-2 d-none d-md-inline-block" (click)="logout()" href="#">Log out, {{name}}</a>

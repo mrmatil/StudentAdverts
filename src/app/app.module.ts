@@ -10,6 +10,7 @@ import { HomeComponent } from './home/home.component';
 import { LoggingComponent } from './logging/logging.component';
 import { RegisterComponent } from './register/register.component';
 import { MyadvertsComponent } from './myadverts/myadverts.component';
+import { AddComponent } from './add/add.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { MyadvertsComponent } from './myadverts/myadverts.component';
     HomeComponent,
     LoggingComponent,
     RegisterComponent,
-    MyadvertsComponent
+    MyadvertsComponent,
+    AddComponent
   ],
   imports: [
     HttpClientModule,
