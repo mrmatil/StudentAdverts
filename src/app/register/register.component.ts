@@ -20,6 +20,12 @@ export class RegisterComponent implements OnInit {
   private json;
 
   ngOnInit(): void {
+    if (sessionStorage.getItem('user') != null) {
+      this.router.navigate(['/'])
+        .then(() => {
+          window.location.reload();
+        });
+    }
   }
 
   loglog() {

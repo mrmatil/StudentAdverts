@@ -15,6 +15,12 @@ export class LoggingComponent implements OnInit {
   constructor(private apiService: ApiService, private router: Router) { }
 
   ngOnInit(): void {
+    if (sessionStorage.getItem('user') != null) {
+      this.router.navigate(['/'])
+        .then(() => {
+          window.location.reload();
+        });
+    }
   }
 
   logging() {
