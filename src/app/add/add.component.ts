@@ -13,13 +13,19 @@ export class AddComponent implements OnInit {
   phone: number;
   description: string;
   price: number;
+  image: any;
   constructor(private apiService: ApiService, private router: Router) { }
 
-  selectedFile: File;
   
 
   onFileChanged(event) {
-    this.selectedFile = event.target.files[0]
+    let me = this;
+    let tempfile = event.target.files[0]
+    let reader = new FileReader();
+    reader.readAsDataURL(tempfile);
+    reader.onload = function () {
+      me.image = reader.result
+    };
   }
 
 
@@ -33,7 +39,7 @@ export class AddComponent implements OnInit {
   }
 
   addAdvert() {
-    this.apiService.addAdvert(this.title, this.email, this.phone, this.description, this.selectedFile, this.price, sessionStorage.getItem('token')).subscribe(data => {      
+    this.apiService.addAdvert(this.title, this.email, this.phone, this.description, this.image, this.price, sessionStorage.getItem('token')).subscribe(data => {      
       this.router.navigate(['/myadverts'])
         .then(() => {
           window.location.reload();

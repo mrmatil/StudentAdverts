@@ -61,6 +61,7 @@ export class ApiService {
     let options = {
       headers: new HttpHeaders().set('Authorization', `Bearer ${token}`)
     };
+    
     return this.http.post(`${environment.apiUrlAdvert}postadvert`, advert, options);
   }
 
