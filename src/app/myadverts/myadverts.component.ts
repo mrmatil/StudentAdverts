@@ -24,4 +24,16 @@ export class MyadvertsComponent implements OnInit {
     });
   }
 
+  deleteAdvert(id) {
+    if (confirm("Are you sure? ")) {
+      this.apiService.deleteAdvert(id, sessionStorage.getItem('token')).subscribe((data) => {
+        location.reload();
+      },
+      error => {
+        console.log(error);
+        alert("Cannot delete advert");
+      });
+    }
+  }
+
 }

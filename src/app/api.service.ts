@@ -59,4 +59,11 @@ export class ApiService {
     };
     return this.http.post(`${environment.apiUrlAdvert}postadvert`, advert, options);
   }
+
+  deleteAdvert(id, token) {
+    let options = {
+      headers: new HttpHeaders().set('Authorization', `Bearer ${token}`)
+    };
+    return this.http.delete(`${environment.apiUrlAdvert}deleteadvert/${id}`, options);
+  }
 }
