@@ -38,4 +38,11 @@ export class ApiService {
     console.log(body);
     return this.http.post<Token>(`${environment.apiUrlToken}`, body.toString(), options );
   }
+
+  getUsersAdverts(token) {
+    let options = {
+      headers: new HttpHeaders().set('Authorization', `Bearer ${token}`)
+    };
+    return this.http.get<Advert[]>(`${environment.apiUrlAdvert}getusersadverts`, options);
+  }
 }
