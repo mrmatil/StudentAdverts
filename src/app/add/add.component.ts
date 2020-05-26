@@ -22,9 +22,13 @@ export class AddComponent implements OnInit {
     let me = this;
     let tempfile = event.target.files[0]
     let reader = new FileReader();
+    // reader.readAsBinaryString(tempfile)
     reader.readAsDataURL(tempfile);
     reader.onload = function () {
       me.image = reader.result
+      // me.image = new FormData()
+      // me.image.append('newProduct', tempfile, tempfile.name)
+      console.log("DUPA")
     };
   }
 

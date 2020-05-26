@@ -5,5 +5,5 @@ export class NewAdvert {
   dateAndTime: Date;
   description: string;
   price?: number;
-  image?: File;
+  image?: any;
 }
