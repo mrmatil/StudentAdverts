@@ -12,6 +12,7 @@ import { RegisterComponent } from './register/register.component';
 import { MyadvertsComponent } from './myadverts/myadverts.component';
 import { AddComponent } from './add/add.component';
 import { EditComponent } from './edit/edit.component';
+import { SearchComponent } from './search/search.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { EditComponent } from './edit/edit.component';
     RegisterComponent,
     MyadvertsComponent,
     AddComponent,
-    EditComponent
+    EditComponent,
+    SearchComponent
   ],
   imports: [
     HttpClientModule,
