@@ -14,6 +14,7 @@ import { AddComponent } from './add/add.component';
 import { EditComponent } from './edit/edit.component';
 import { SearchComponent } from './search/search.component';
 import { DetailsComponent } from './details/details.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { DetailsComponent } from './details/details.component';
     AddComponent,
     EditComponent,
     SearchComponent,
-    DetailsComponent
+    DetailsComponent,
+    NotFoundComponent
   ],
   imports: [
     HttpClientModule,
