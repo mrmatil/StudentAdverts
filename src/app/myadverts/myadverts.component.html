@@ -4,9 +4,9 @@
     <div class="card-body">
       <h5 class="card-title">{{item.title}}</h5>
       <p class="card-text">{{item.description}}</p>
-      <a href="#" class="btn btn-dark">Szczegóły</a>
-      <a (click)="deleteAdvert(item.id)" class="btn btn-danger">Usuń</a>
-      <a (click)="editAdvert(item.id)" class="btn btn-warning">Edytuj</a>
+      <button (click)="detailsAdvert(item.id)" class="btn btn-dark">Details</button>
+      <a (click)="deleteAdvert(item.id)" class="btn btn-danger">Delete</a>
+      <a (click)="editAdvert(item.id)" class="btn btn-warning">Edit</a>
     </div>
   </div>
 </div>

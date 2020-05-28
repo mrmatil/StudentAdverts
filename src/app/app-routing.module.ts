@@ -7,6 +7,7 @@ import { MyadvertsComponent } from './myadverts/myadverts.component';
 import { AddComponent } from './add/add.component';
 import { EditComponent } from './edit/edit.component';
 import { SearchComponent } from './search/search.component';
+import { DetailsComponent } from './details/details.component';
 
 
 const routes: Routes = [
@@ -21,7 +22,9 @@ const routes: Routes = [
   { path: 'myadverts', component: MyadvertsComponent },
   { path: 'add', component: AddComponent },
   { path: 'edit/:id', component: EditComponent},
-  { path: 'search', component: SearchComponent}
+  { path: 'search', component: SearchComponent},
+  { path: 'details/:id', component: DetailsComponent}
+
 
 ];
 

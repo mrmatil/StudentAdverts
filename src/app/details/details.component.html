@@ -1,0 +1,19 @@
+<form class="form-editAdvert">
+    <h1 class="h3 mb-3 font-weight-normal">{{advert.title}}</h1>
+    <div class="form-group" *ngIf="hasEmail == true" >
+      <label >Email: {{advert.email}}</label>
+    </div>
+    <div class="form-group" *ngIf="hasPhone == true">
+      <label >Phone number: {{advert.phone}}</label>
+    </div>
+    <div class="form-group" *ngIf="hasDescription == true">
+        Description:
+      <label >{{advert.description}}</label>
+    </div>
+    <div class="form-group" *ngIf="hasPrice == true">
+        Price:
+      <label >{{advert.price}} zł / h</label>
+    </div>
+    
+  </form>
+  

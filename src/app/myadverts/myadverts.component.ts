@@ -43,4 +43,11 @@ export class MyadvertsComponent implements OnInit {
       });
   }
 
+  detailsAdvert(id) {
+    this.router.navigate([`/details/${id}`])
+      .then(() => {
+        window.location.reload();
+      });
+  }
+
 }

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Advert } from '../shared/models/advert.model';
 import { ApiService } from '../api.service';
+import { Router } from '@angular/router';
 
 
 
@@ -12,7 +13,7 @@ import { ApiService } from '../api.service';
 export class SearchComponent implements OnInit {
 
 
-  constructor(private apiService: ApiService) { }
+  constructor(private apiService: ApiService, private router: Router) { }
   advert:Advert[];
   filteredAdvert:Advert[];
   filter:string;
@@ -33,6 +34,13 @@ export class SearchComponent implements OnInit {
 
   if (sessionStorage.getItem('user') != null)
     console.log(sessionStorage.getItem('user'));
+  }
+
+  detailsAdvert(id) {
+    this.router.navigate([`/details/${id}`])
+      .then(() => {
+        window.location.reload();
+      });
   }
 }
 

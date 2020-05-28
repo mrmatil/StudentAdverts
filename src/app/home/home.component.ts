@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../api.service';
 import { collectExternalReferences } from '@angular/compiler';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -10,8 +11,8 @@ import { collectExternalReferences } from '@angular/compiler';
 export class HomeComponent implements OnInit {
   adverts;
   adverts2;
-  
-  constructor(private apiService: ApiService) { }
+
+  constructor(private apiService: ApiService, private router: Router) { }
 
   ngOnInit(): void {
 
@@ -27,6 +28,13 @@ export class HomeComponent implements OnInit {
 
     if (sessionStorage.getItem('user') != null)
       console.log(sessionStorage.getItem('user'));
+  }
+
+  detailsAdvert(id) {
+    this.router.navigate([`/details/${id}`])
+      .then(() => {
+        window.location.reload();
+      });
   }
     
 }
