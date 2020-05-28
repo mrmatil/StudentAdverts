@@ -24,7 +24,8 @@
                     </div>
 </div>
 <!--  ng-repeat="item in advert | orderBy:['price'] | filter: {Name: searchAdvert}"-->
-<div class="card-columns" layout-align="center" >
+<div class="container-fluid mt-3">
+    <div class="card-columns" layout-align="center" >
     <div class="card" style="width: 28rem;" *ngFor="let item of filteredAdvert" >
       <!--<img src="..." class="card-img-top" alt="Image not found">-->
       <div class="card-body">
@@ -33,4 +34,5 @@
         <button (click)="detailsAdvert(item.id)" class="btn btn-dark">Details</button>
       </div>
     </div>
+</div>
 </div>
