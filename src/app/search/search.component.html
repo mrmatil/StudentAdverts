@@ -10,11 +10,11 @@
                                     </div>
                                     <!--end of col-->
                                     <div class="col">
-                                        <input class="form-control form-control-lg form-control-borderless" type="search" placeholder="Search advert">
+                                        <input name="filter" [(ngModel)]="filter" class="form-control form-control-lg form-control-borderless" type="text" placeholder="Search advert">
                                     </div>
                                     <!--end of col-->
                                     <div class="col-auto">
-                                        <button class="btn btn-lg btn-secondary" type="submit">Search</button>
+                                        <button class="btn btn-lg btn-secondary" (click)="filterAdverts(filter)" type="submit">Search</button>
                                     </div>
                                     <!--end of col-->
                                 </div>
@@ -22,4 +22,15 @@
                         </div>
                         <!--end of col-->
                     </div>
+</div>
+<!--  ng-repeat="item in advert | orderBy:['price'] | filter: {Name: searchAdvert}"-->
+<div class="card-columns" layout-align="center" >
+    <div class="card" style="width: 28rem;" *ngFor="let item of filteredAdvert" >
+      <!--<img src="..." class="card-img-top" alt="Image not found">-->
+      <div class="card-body">
+        <h5 class="card-title">{{item.title}}</h5>
+        <p class="card-text">{{item.description}}</p>
+        <a href="#" class="btn btn-dark">Go somewhere</a>
+      </div>
+    </div>
 </div>
